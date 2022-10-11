@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import logo from './image/logo.png';
+import pic from './image/pic.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -14,15 +14,28 @@ const Header = () => {
             title='coderbyte'
             className='inline-flex items-center'
           >
-            
-            <div className='w-8 text-deep-purple-accent-400'>
-                <img src={logo} alt="" />
+            <div className='w-8'>
+              <img src={pic} alt="" />
             </div>
             <span className='ml-2 text-xl font-bold tracking-wide text-gray-800'>
-                Coderbyte
+              CoderByte
             </span>
           </Link>
           <ul className='flex items-center hidden space-x-8 lg:flex'>
+            <li>
+              <NavLink
+                to='/home'
+                aria-label='Home'
+                title='Home'
+                className={({ isActive }) =>
+                  isActive
+                    ? 'font-medium tracking-wide text-blue-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
+                    : 'font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
+                }
+              >
+                Home
+              </NavLink>
+            </li>
             <li>
               <NavLink
                 to='/topics'
@@ -41,7 +54,7 @@ const Header = () => {
               <NavLink
                 to='/statistic'
                 aria-label='statistic'
-                title='statistic'
+                title='Statistic'
                 className={({ isActive }) =>
                   isActive
                     ? 'font-medium tracking-wide text-blue-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
@@ -95,27 +108,12 @@ const Header = () => {
                     <div>
                       <Link
                         to='/'
-                        aria-label='proReader'
-                        title='proReader'
+                        aria-label='coderbyte'
+                        title='coderbyte'
                         className='inline-flex items-center'
                       >
-                        <svg
-                          className='w-8 text-deep-purple-accent-400'
-                          viewBox='0 0 24 24'
-                          strokeLinejoin='round'
-                          strokeWidth='2'
-                          strokeLinecap='round'
-                          strokeMiterlimit='10'
-                          stroke='currentColor'
-                          fill='none'
-                        >
-                          <rect x='3' y='1' width='7' height='12' />
-                          <rect x='3' y='17' width='7' height='6' />
-                          <rect x='14' y='1' width='7' height='6' />
-                          <rect x='14' y='11' width='7' height='12' />
-                        </svg>
                         <span className='ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase'>
-                          Coderbyte
+                          CoderByte
                         </span>
                       </Link>
                     </div>
@@ -140,31 +138,31 @@ const Header = () => {
                       <li>
                         <Link
                           to='/'
-                          aria-label='topics'
-                          title='Topics'
+                          aria-label='Home'
+                          title='Home'
                           className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                         >
-                          Topics
+                          Home
                         </Link>
                       </li>
                       <li>
                         <Link
-                          to='/statistic'
-                          aria-label='statistic'
-                          title='Statistic'
+                          to='/books'
+                          aria-label='Books'
+                          title='Books'
                           className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                         >
-                          Statistic
+                          Books
                         </Link>
                       </li>
                       <li>
                         <Link
-                          to='/blog'
-                          aria-label='blog'
-                          title='Blog'
+                          to='/about'
+                          aria-label='About Us'
+                          title='About Us'
                           className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                         >
-                          Blog
+                          About Us
                         </Link>
                       </li>
                     </ul>
