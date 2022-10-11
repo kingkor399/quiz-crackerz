@@ -1,13 +1,26 @@
 import React from 'react';
+import Options from './Options';
 
-const Quizees  = ({quize}) => {
-    // console.log(quize)
-    const {options,question,correctAnswer} = quize;
+const Quizees = ({ quize }) => {
+    console.log(quize)
+    const { options, question, correctAnswer } = quize;
     return (
-        <div>
-            
+        <div className="container rounded-lg bg-gray-100 mb-10 mt-4 shadow-md w-3/6 flex flex-col items-center mx-auto text-center lg:pb-2 md:py-10 md:px-10 lg:px-10">
+            <div className=''>
+                <h2 className='font-bold'>Quiz: {question}</h2>
+            </div>
+            <div>
+                {
+                    options.map((option) => <Options
+                        option={option}
+                    ></Options>)
+                }
+            </div>
+            <div>
+
+            </div>
         </div>
     );
 };
 
-export default Quizees ;
+export default Quizees;
