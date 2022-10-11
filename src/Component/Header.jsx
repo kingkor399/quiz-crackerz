@@ -24,20 +24,6 @@ const Header = () => {
           <ul className='flex items-center hidden space-x-8 lg:flex'>
             <li>
               <NavLink
-                to='/home'
-                aria-label='Home'
-                title='Home'
-                className={({ isActive }) =>
-                  isActive
-                    ? 'font-medium tracking-wide text-blue-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
-                    : 'font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
-                }
-              >
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
                 to='/topics'
                 aria-label='topics'
                 title='Topics'
@@ -137,32 +123,32 @@ const Header = () => {
                     <ul className='space-y-4'>
                       <li>
                         <Link
-                          to='/'
-                          aria-label='Home'
-                          title='Home'
+                          to='/topics'
+                          aria-label='topics'
+                          title='Topics'
                           className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                         >
-                          Home
+                          Topics
                         </Link>
                       </li>
                       <li>
                         <Link
-                          to='/books'
-                          aria-label='Books'
-                          title='Books'
+                          to='/statistic'
+                          aria-label='statistic'
+                          title='Statistic'
                           className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                         >
-                          Books
+                          Statistic
                         </Link>
                       </li>
                       <li>
                         <Link
-                          to='/about'
-                          aria-label='About Us'
-                          title='About Us'
+                          to='/blog'
+                          aria-label='blog'
+                          title='Blog'
                           className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                         >
-                          About Us
+                          Blog
                         </Link>
                       </li>
                     </ul>
