@@ -18,16 +18,16 @@ const router = createBrowserRouter([
             },
             element: <Home></Home>
             },
-            {
-              path: '/language/:id',
-              element: <LanguageDetails></LanguageDetails>,
-              loader: ({params}) =>{
-                return fetch(` https://openapi.programming-hero.com/api/quiz/${params.id}`)
-              },
-            },
             { path: '/topics',
             loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
             element: <Topics></Topics> },
+            {
+              path: '/language/:id',
+              loader: ({params}) =>{
+                return fetch(` https://openapi.programming-hero.com/api/quiz/${params.id}`)
+              },
+              element: <LanguageDetails></LanguageDetails>,
+            },
             { path: '/statistic', element: <Statistic></Statistic> },
             { path: '/blog', element: <Blog></Blog> }
         ]

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Language = ({language}) => {
     const { name, logo,id } = language;
     return (
-        <div className='bg-gray-200	 p-6 rounded shadow-lg'>
+        <div className='bg-purple-300	 p-6 rounded shadow-lg'>
             <img className='bg-slate-900 object-cover w-full h-56 mb-6 rounded shadow-lg md:h-64 xl:h-80'
                 src={logo}
                 alt='/' />
