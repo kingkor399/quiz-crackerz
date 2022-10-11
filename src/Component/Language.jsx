@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Language = ({ language }) => {
+const Language = ({language}) => {
     const { name, logo,id } = language;
     return (
         <div className='bg-gray-200	 p-6 rounded shadow-lg'>
