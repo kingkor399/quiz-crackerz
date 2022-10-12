@@ -18,7 +18,7 @@ const Quizees = ({ quize }) => {
         toast(correctAnswer)
     }
     return (
-        <div className="container rounded-lg bg-gray-100 mb-10 mt-4 shadow-md w-3/6 flex flex-col items-center mx-auto text-center lg:pb-2 md:py-10 md:px-10 lg:px-10">
+        <div className="container rounded-lg bg-purple-100 mb-10 mt-4 shadow-md lg:w-3/6 flex flex-col items-center mx-auto text-center lg:pb-2 md:py-10 md:px-10 lg:px-10">
             <div className='flex'>
                 <h2 className='font-bold'>Question: {question}</h2>
                 <buttton onClick={() => eyeBtn()}>
@@ -27,7 +27,8 @@ const Quizees = ({ quize }) => {
             </div>
             <div>
                 {
-                    options.map((option) => <Options
+                    options.map((option,idx) => <Options
+                        key = {idx}
                         option={option}
                         optionBtn={optionBtn}
                     ></Options>)
