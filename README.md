@@ -1,1 +1,1 @@
-Project-Name: Quiz-Coderbyte-Assingment
+Project-Name: <h2 className="text-3xl">Quiz-Coderbyte-Assingment</h2>
